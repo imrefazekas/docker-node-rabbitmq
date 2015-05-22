@@ -1,0 +1,30 @@
+{
+  "name": "Microservice",
+  "version": "1.0.0",
+  "mod-project-name": "Microservice",
+  "description": "Microservice",
+  "keywords": [],
+  "private": true,
+  "author": {
+    "name": "Imre Fazekas",
+    "email": "imre.fazekas@icloud.com"
+  },
+  "main": "server/start.js",
+  "dependencies": {
+    "compression": "^1.4.3",
+    "connect": "^3.3.5",
+    "connect-timeout": "^1.6.1",
+    "lodash": "^3.9.1",
+    "minimist": "^1.1.1",
+    "morgan": "^1.5.2",
+    "serve-static": "^1.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --harmony server/start.js"
+  },
+  "engines": {
+    "node": "0.12.x"
+  },
+  "_id": "microservice@1.0.0"
+}

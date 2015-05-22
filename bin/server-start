@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+ulimit -n 1024
+chown -R rabbitmq:rabbitmq /data/rabbit
+rabbitmq-server -detached
+
+sleep 5
+
+pm2 start server/start.js --node-args="--harmony" --no-daemon
