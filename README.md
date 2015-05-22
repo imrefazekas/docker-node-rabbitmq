@@ -8,3 +8,5 @@ The Node is running a simple demo app using connect v3.
 Rabbitmq is configured via its config/rabbitmq.config file declaring "newadmin" as an administrator to it.
 
 The image exposes ports 15672 and 8080.
+
+[Docker hub](https://registry.hub.docker.com/u/imrefazekas/docker-node-rabbitmq/)

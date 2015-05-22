@@ -17,14 +17,10 @@ RUN apt-get install --no-install-recommends -y -q curl python build-essential gi
 
 
 
-# Add files.
-ADD bin/rabbitmq-start /usr/local/bin/
-
 # RabbitMQ install
 RUN apt-get install rabbitmq-server -y
 
 ADD config/rabbitmq.config /etc/rabbitmq/
-RUN chmod +x /usr/local/bin/rabbitmq-start
 
 RUN rabbitmq-plugins enable rabbitmq_management rabbitmq_management_agent
 
