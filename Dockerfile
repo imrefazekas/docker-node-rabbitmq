@@ -21,7 +21,10 @@ RUN apt-get install --no-install-recommends -y -q curl python build-essential gi
 RUN apt-get install rabbitmq-server -y
 
 ADD config/rabbitmq.config /etc/rabbitmq/
-
+ADD config/hosts /tmp/hosts
+RUN cat /tmp/hosts >> /etc/hosts && rm -f /tmp/hosts
+ADD config/.erlang.cookie /var/lib/rabbitmq/.erlang.cookie
+RUN chown rabbitmq /var/lib/rabbitmq/.erlang.cookie
 RUN rabbitmq-plugins enable rabbitmq_management rabbitmq_management_agent
 
 RUN mkdir /data
